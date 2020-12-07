@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <style>
+        .container{
+            background: skyblue;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .container .row{
+            margin-bottom: 30px;
+        }
+        /* .row里面的div具有类名含有col */
+        .container .row div[class*="col"]{
+            border:1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- 先写布局容器
+    固定自适应 .container
+    流体百分比 .container-fluid
+
+    再写行 .row  加上.row以后可以布局容器默认的15px左右内填充
+
+    最后我们会在.row里面再写列
+    .col
+    .col-数字
+    .col-屏幕尺寸
+    .col-屏幕尺寸-数字
+
+    bootstrap规定一般最多12格子
+
+    屏幕尺寸分为5个级别
+    超小屏幕   .col   <576px
+    小屏幕     .col-sm      >=576px
+    中屏幕     .col-md      >=768px
+    大屏幕     .col-lg      >=992px
+    超大屏幕   .col-xl      >=1200px -->
+
+    <div class="container">
+        <div class="row">
+            <!-- 小屏幕下均分 -->
+            <!-- 只要不写数字,都可以表示均分 -->
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+        </div>
+
+        <div class="row">
+            <!-- 只要不写数字,都可以表示均分 -->
+            <!-- bootstrap中如果含有屏幕相关类名, -lg -xl -sm -md都表示,在特定屏幕尺寸下才可以生效 -->
+            <div class="col-lg">1</div>
+            <div class="col-lg">2</div>
+            <div class="col-lg">3</div>
+        </div>
+        
+        <div class="row">
+            <!-- bootstrap还遵循移动端优先,如果比较大屏幕的没设置,会用之前屏幕提供的样式 -->
+            <div class="col-2">1</div>
+            <div class="col-2">2</div>
+            <div class="col-2">3</div>
+            <div class="col-2">4</div>
+            <div class="col-2">5</div>
+            <div class="col-2">6</div>
+            <div class="col-2">7</div>
+            <div class="col-2">8</div>
+            <div class="col-2">9</div>
+            <div class="col-2">10</div>
+            <div class="col-2">11</div>
+            <div class="col-2">12</div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">1</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">2</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">3</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">4</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">5</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">6</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">7</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">8</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">9</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">10</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">11</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">12</div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2 col-md-3">第一列</div>
+            <div class="col-sm-2 col-md-3">第二列</div>
+            <div class="col-sm-8 col-md-6">第三列</div>
+        </div>
+
+    </div>
+</body>
+</html>

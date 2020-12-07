@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <style>
+        .container{
+            background: skyblue;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        .container .row{
+            height: 150px;
+            background: pink;
+        }
+        .container .row .col-md-3{
+            height: 50px;
+            background: lightgreen;
+        }
+        /* .row里面的div具有类名含有col */
+        .container .row div[class*="col"]{
+            border:1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- align-item-start,align-item-center,align-item-end是设置行里面的列垂直对齐方式 -->
+    <!-- 所以需要给.row设置一个固定的高度 -->
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col-md-3">1</div>
+            <div class="col-md-3">2</div>
+            <div class="col-md-3">3</div>
+            <div class="col-md-3">4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3">1</div>
+            <div class="col-md-3">2</div>
+            <div class="col-md-3">3</div>
+            <div class="col-md-3">4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-md-3">1</div>
+            <div class="col-md-3">2</div>
+            <div class="col-md-3">3</div>
+            <div class="col-md-3">4</div>
+        </div>
+    </div>
+</body>
+</html>

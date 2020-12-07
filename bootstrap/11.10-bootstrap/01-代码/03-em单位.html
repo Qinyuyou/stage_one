@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size:100px;
+        }
+        body{
+            font-size:50px;
+        }
+        .grandfather{
+            width: 600px;
+            height: 600px;
+            background: orange;
+            font-size:30px;
+        }
+        .grandfather .father{
+            width: 500px;
+            height: 500px;
+            background:pink;
+            font-size:20px;
+        }
+        .grandfather .father .son{
+            width: 10em;
+            height: 5em;
+            background: skyblue;
+            font-size:12px;
+        }
+        /* 小结: em单位是相对单位,相对的是自身字体大小, 如果自身的字体大小不存在,会继承父辈 */
+    </style>
+</head>
+<body>
+    <div class="grandfather">
+        <div class="father">
+            <div class="son">子元素</div>
+        </div>
+    </div>
+</body>
+</html>

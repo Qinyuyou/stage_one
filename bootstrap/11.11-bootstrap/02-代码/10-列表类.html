@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <!-- .list-unstyled去掉列表项目符号 -->
+    <ul class="list-unstyled">
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+        <li>赵六</li>
+        <li>孙七</li>
+    </ul>
+
+    <ol>
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+        <li>赵六</li>
+        <li>孙七</li>
+    </ol>
+    
+    <!-- 给ul设置.list-inline 与 给li设置.list-inline-item可以实现li横向排列 -->
+    <ul class="list-inline">
+        <li class="list-inline-item">西瓜</li>
+        <li class="list-inline-item">冬瓜</li>
+        <li class="list-inline-item">南瓜</li>
+        <li class="list-inline-item">木瓜</li>
+    </ul>
+
+    <!-- 使用栅格系统,实现自定义列表横向排列 -->
+    <dl class="row">
+        <dt class="col-sm-3">支付方式</dt>
+        <dd class="col-sm-9">现金支付</dd>
+    </dl>
+
+    <hr/>
+
+    
+    <!-- 使用.text-truncate 可以省略溢出； -->
+    <div style="background-color: pink;width: 100px;" class="text-truncate">
+        这是一段测试各种文本效果的话，本身没有意义！
+    </div>
+</body>
+</html>

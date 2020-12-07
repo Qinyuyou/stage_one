@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 媒体查询也是CSS3的一部分,所以是需要写在CSS样式中 */
+        /* @media 媒体类型 and|not|only (媒体特征) {
+            CSS代码;
+        } */
+
+        /* 媒体类型取值 all print screen 要记screen屏幕的意思 */
+        /* and|not|only 要记and  用于连接  媒体类型和媒体特征  的词语 */
+        /* 媒体特征   有width宽度   min-width最小宽度  max-width最大宽度 */
+
+        /* 当屏幕最小宽度800的时候,也就是>=800, 使用对应{}里面定义的css样式 */
+        @media screen and ( min-width : 800px ){
+            body{
+                background: pink;
+            }
+        }
+
+        /* 当屏幕最大宽度800的时候,也就是<=799, 使用对应{}里面定义的css样式 */
+        @media screen and ( max-width : 799px ){
+            body{
+                background: skyblue;
+            }
+        }
+
+        @media screen and ( max-width : 300px ){
+            body{
+                background: lightgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

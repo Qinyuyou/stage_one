@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <style>
+        .container{
+            border:1px solid red;
+        }
+        .row{
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        /* CSS3属性选择器  div标签具有class属性,含有col字符串 */
+        div[class*="col"]{
+            border:1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- bootstrap最成功也是最难的就是栅格系统 -->
+    <!-- 栅格系统就是把一行分成若干个格子, bootstrap允许一行最多12个格子(列) -->
+    <!-- 我们一般布局容器使用.container或者.container-fluid -->
+    <!-- 接着我们会在布局容器里面嵌套.row 行的意思 .row可以去掉.container或者.container-fluid默认左右15px内填充 -->
+    <!-- .row我们会继续嵌套列  有以下几种写
+        .col                均分一行
+        .col-屏幕尺寸
+        .col-多少格 
+        .col-屏幕尺寸-多少格   
+     -->
+
+     <!-- 屏幕尺寸 -->
+    <!-- .col 超小屏幕   小于576px -->
+    <!-- .col-sm小屏幕   大于576px -->
+    <!-- .col-md中屏幕   大于768px -->
+    <!-- .col-lg大屏幕   大于992px -->
+    <!-- .col-xl大屏幕   大于1200px -->
+
+    <!-- 移动端优先,如果大屏幕没写,会按小屏幕的设置 -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">第1列</div>
+            <div class="col">第2列</div>
+            <div class="col">第3列</div>
+            <div class="col">第4列</div>
+            <div class="col">第5列</div>
+        </div>
+
+        <!-- 如果不足够12份 -->
+        <div class="row">
+            <div class="col-sm-5">第1列</div>
+            <div class="col-sm-2">第2列</div>
+            <div class="col-sm-2">第3列</div>
+        </div>
+
+        <!-- 如果超过12份 -->
+        <div class="row">
+            <div class="col-sm-5">第1列</div>
+            <div class="col-sm-4">第2列</div>
+            <div class="col-sm-4">第3列</div>
+        </div>
+
+        <!-- 想要列换行,需要使用.w-100 -->
+        <div class="row">
+            <div class="col-sm-2">第1列</div>
+            <div class="col-sm-2">第2列</div>
+            <div class="col-sm-2">第3列</div>
+            <div class="w-100"></div>
+            <div class="col-sm-2">第4列</div>
+            <div class="col-sm-2">第5列</div>
+            <div class="col-sm-2">第6列</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <style>
+        .container .row [class*="col"]{
+            border:1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- 响应式图片 添加.img-fluid类 -->
+    <img src="images/banner01.jpg" class="img-fluid"/>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <!-- 缩略图片 .img-thumbnail-->
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <img src="images/banner02.jpg" class="img-thumbnail"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- 浮动类 .float-left左浮类  .float-right右浮类 -->
+    <img src="images/banner03.jpg" class="img-thumbnail w-25"/>
+    <img src="images/banner04.jpg" class="img-thumbnail w-25 float-right"/>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <!-- 我们可以使用.d-block显示元素  .d-none隐藏元素 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 d-sm-none d-md-block">第1列</div>
+            <div class="col-md-3">第2列</div>
+            <div class="col-md-3">第3列</div>
+            <div class="col-md-3">第4列</div>
+            <div class="col-md-3 d-sm-none d-lg-block">第5列</div>
+        </div>
+    </div>
+
+    <br/>
+    
+    <div style="border:1px solid red;" class="text-center">我是div的文字</div>
+</body>
+</html>

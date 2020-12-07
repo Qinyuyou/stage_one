@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and ( max-width: 540px ){
+            body{
+                background: skyblue;
+            }
+        }
+
+        @media screen and ( min-width: 540px ) and ( max-width: 969px ){
+         body{
+             background: lightgreen;
+         }   
+        }
+        @media screen and ( min-width: 970px ){
+            body{
+                background: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ① 按照从大到小的或者从小到大的思路 -->
+    <!-- ② 注意我们有最大值 max-width 和最小值 min-width都是包含等于的 -->
+    <!-- ③ 当屏幕小于540像素， 背景颜色变为蓝色 （x <= 539） -->
+    <!-- ④ 当屏幕大于等于540像素 并且小于等于 969像素的时候 背景颜色为 绿色 ( 540=<x <= 969） -->
+    <!-- ⑤ 当屏幕大于等于 970像素的时候，背景颜色为红色 （ x >= 970） -->
+</body>
+</html>

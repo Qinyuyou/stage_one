@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <style>
+        .container{
+            background: skyblue;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        .container .row{
+            height: 150px;
+            background: pink;
+        }
+        .container .row .col-md-3{
+            height: 50px;
+            background: lightgreen;
+        }
+        /* .row里面的div具有类名含有col */
+        .container .row div[class*="col"]{
+            border:1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-md-3">1</div>
+            <div class="col-md-3">2</div>
+            <div class="col-md-3">3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3">1</div>
+            <div class="col-md-3">2</div>
+            <div class="col-md-3">3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-3">1</div>
+            <div class="col-md-3">2</div>
+            <div class="col-md-3">3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 两端同等外边距 -->
+        <div class="row justify-content-around">
+            <div class="col-md-3">1</div>
+            <div class="col-md-3">2</div>
+            <div class="col-md-3">3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 两端对齐 记一下-->
+        <div class="row justify-content-between">
+            <div class="col-md-3">1</div>
+            <div class="col-md-3">2</div>
+            <div class="col-md-3">3</div>
+        </div>
+    </div>
+</body>
+</html>
